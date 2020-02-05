@@ -1,0 +1,120 @@
+@import url(./node_modules/bootstrap/dist/css/bootstrap.min.css);
+h2 {
+  font-size: 1.25rem; }
+
+h5 {
+  font-size: 1rem; }
+
+.fas {
+  color: #9E9E9E; }
+
+header {
+  border-bottom: 2px solid #344A94; }
+  header img {
+    margin-right: .75rem; }
+
+header, section {
+  background-color: #ffffff; }
+
+body {
+  padding: 0;
+  font: 16px Google Sans, Noto, Roboto, Helvetica Neue, sans-serif; }
+
+#card {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  overflow: hidden; }
+
+.button {
+  display: table;
+  margin: 0 auto; }
+
+model-viewer {
+  width: 100%;
+  height: 400px; }
+
+.attribution {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 1em; }
+
+.attribution h1 {
+  margin: 0 0 0.25em; }
+
+.attribution img {
+  opacity: 0.5;
+  height: 2em; }
+
+.attribution .cc {
+  flex-shrink: 0;
+  text-decoration: none; }
+
+.bg-ice {
+  background-color: #EEF1FF;
+  height: .5rem; }
+
+.btn-outline-primary {
+  color: #344A94;
+  border-color: #344A94; }
+
+.btn {
+  background-color: #ffffff;
+  border-color: #C4C4C4;
+  padding: .5rem 1rem; }
+  .btn.mob {
+    margin: 0 auto;
+    font-size: 0.875rem;
+    position: absolute;
+    bottom: 1rem;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px; }
+  .btn.btn-primary {
+    color: #ffffff;
+    background-color: #344A94;
+    font-weight: 400;
+    font-size: 0.875rem; }
+  .btn img {
+    margin-right: .25rem; }
+
+section h2 {
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0; }
+
+section .title, section .valor, section .description {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+section .valor span, section .valor p {
+  font-size: 0.75rem;
+  margin-bottom: 0; }
+
+section .valor span {
+  color: rgba(0, 0, 0, 0.6); }
+  section .valor span:first-child {
+    text-decoration: line-through; }
+  section .valor span:last-child {
+    color: #419501;
+    margin-left: .175rem; }
+
+section .valor strong {
+  font-size: 1.5rem;
+  margin-right: .375rem; }
+
+section p, section strong {
+  color: rgba(0, 0, 0, 0.8); }
+
+section .description {
+  font-size: 0.875rem;
+  min-height: 10rem; }
+  section .description h5 {
+    color: rgba(0, 0, 0, 0.8); }
+
+footer {
+  border-top: 2px solid #344A94;
+  background-color: #ffffff; }
