@@ -130,6 +130,11 @@ model-viewer {
     font-size: $font14;
     position: absolute;
     bottom: 1rem;
+    &:hover{
+      background-color: $white;
+      border-color: $grey;
+      color: $blue-dark;
+    }
   }
   &.btn-primary{
     color: $white;
@@ -237,10 +242,10 @@ section{
       }
   }
   li + li::before {
-      color: $grey300;
+      color: $grey;
       content: ">";
       font-size: 12px;
-      font-weight: 400;
+      font-weight: 800;
       padding: 0 12px;
   }
   //.is-active

@@ -74,6 +74,10 @@ model-viewer {
     font-size: 0.875rem;
     position: absolute;
     bottom: 1rem; }
+    .btn.mob:hover {
+      background-color: #ffffff;
+      border-color: #C4C4C4;
+      color: #344A94; }
   .btn.btn-primary {
     color: #ffffff;
     background-color: #344A94;
@@ -151,10 +155,10 @@ section .description {
           color: inherit;
           text-decoration: underline; }
     .br-breadcrumb li + li::before {
-      color: #000000;
+      color: #C4C4C4;
       content: ">";
       font-size: 12px;
-      font-weight: 400;
+      font-weight: 800;
       padding: 0 12px; }
     .br-breadcrumb li:last-child {
       color: #344A94;
