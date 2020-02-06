@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en" class="js-focus-visible">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +10,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./dist/css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-     <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
     <!-- NOTE: you must adjust the paths as appropriate for your project -->
 
     <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
-    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script><style type="text/css"></style>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+    <style type="text/css"></style>
 
     <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
@@ -30,95 +32,237 @@
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer=""></script>
 
     <title></title>
-  </head>
-  <body>
+</head>
 
-    <!-- telas menores de 768-->
-    <header class="container d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none">
-        <div class="row d-flex align-items-center justify-content-center pt-2 pb-2 ">
-            <div class="col-1">
-                <i class="fas fa-bars"></i>
+<body>
+
+    <header>
+        <div class="container">
+            <!-- telas maiores de 768-->
+            <div class="d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none">
+                <div class="row d-flex align-items-center justify-content-center pt-2 pb-2 ">
+                    <div class="col-1">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="col-7 d-flex justify-content-center pr-0">
+                        <img src="./dist/imgs/logo-db-lab.svg">
+                    </div>
+                    <div class="col-3 d-flex justify-content-end">
+                        <img src="./dist/imgs/cart_icon.svg">
+                        <i class="fas fa-search align-self-center"></i>
+                    </div>
+                </div>
             </div>
-            <div class="col-7 d-flex justify-content-center pr-0">
-                <img src="./dist/imgs/logo-db-lab.svg">
+            <!-- maiores de 786 -->
+            <div class="d-none d-xs-none d-sm-none d-md-block d-lg-block d-xl-block">
+                <div class="row d-flex align-items-center justify-content-center pt-2 pb-2 ">
+                    <div class="col-2 d-flex justify-content-left pr-0">
+                        <img src="./dist/imgs/logo-db-lab.svg">
+                    </div>
+                    <div class="col-9">
+                        <div class="br-input has-icon ui-widget">
+                            <!-- is-invalid to input invalid value -->
+                            <input id="search-autocomplete" type="search" placeholder="Procure por código, nome, produto, marca..." class="result ui-autocomplete-input" autocomplete="off">
+                            <span class="icon">
+                              <i class="fas fa-search"></i>
+                            </span>
+                          </div>
+                    </div>
+                    <div class="col-1 d-flex justify-content-end">
+                        <img src="./dist/imgs/cart_icon.svg">
+                    </div>
+                </div>
             </div>
-            <div class="col-3 d-flex justify-content-end">
-                <img src="./dist/imgs/cart_icon.svg">
-                <i class="fas fa-search align-self-center"></i>
-            </div>    
         </div>
     </header>
-    <div class="bg-ice"></div>
+    <div class="bg-ice d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none"></div>
+    <!-- telas menores de 768-->
     <article class="d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none">
         <section class="container pt-3 pb-3 mt-2">
             <div class="row">
-             <div class="col-12 col-xs-12">
-                 <div id="card">
-                     <!-- All you need to put beautiful, interactive 3D content on your site: -->
-                     <model-viewer src="https://cdn.glitch.com/d917115a-4d48-461c-af06-07b733f61f67%2Fcadeira.glb?v=1580759112494" ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878" alt="A 3D model of a chair" background-color="#eeF1FF" preload="" poster="https://cdn.glitch.com/d917115a-4d48-461c-af06-07b733f61f67%2FScreenshot%20from%202020-02-04%2011-05-00.png?v=1580825135220" shadow-intensity="1" shadow-softness="0" camera-controls="" interaction-prompt="auto" auto-rotate-delay="7000" ar="" data-js-focus-visible="">
-                       <button slot="ar-button" class="button" style="background-color: white; border-radius: 4px; border: none; position: absolute; bottom: 16px;">
-                         👋 Activate AR
-                       </button>
-                       <div class="d-flex justify-content-center">
-                         <button class="btn btn-outline-primary mob d-flex align-items-center"><img src="./dist/imgs/cube.svg">EXPERIMENTE EM AR</button>
-                       </div>
-                     </model-viewer>
-                 </div> 
-             </div>
+                <div class="col-12 col-xs-12">
+                    <div id="card">
+                        <!-- All you need to put beautiful, interactive 3D content on your site: -->
+                        <model-viewer
+                            src="https://cdn.glitch.com/d917115a-4d48-461c-af06-07b733f61f67%2Fcadeira.glb?v=1580759112494"
+                            ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
+                            alt="A 3D model of a chair" background-color="#eeF1FF" preload=""
+                            poster="https://cdn.glitch.com/d917115a-4d48-461c-af06-07b733f61f67%2FScreenshot%20from%202020-02-04%2011-05-00.png?v=1580825135220"
+                            shadow-intensity="1" shadow-softness="0" camera-controls="" interaction-prompt="auto"
+                            auto-rotate-delay="7000" ar="" data-js-focus-visible="">
+                            <div slot="ar-button" class="d-flex justify-content-center">
+                                <button class="btn btn-outline-primary mob d-flex align-items-center"><img src="./dist/imgs/cube.svg"> EXPERIMENTE EM AR</button>
+                            </div>
+                        </model-viewer>
+                    </div>
+                </div>
             </div>
-         </section>
-         <div class="bg-ice"></div>
-         <section class="container">
-             <div class="row">
-                 <div class="col title">
-                     <h2 class="d-flex justify-content-left">Cadeira Eames Estampada</h2>
-                 </div>
-             </div>
-         </section>
-         <div class="bg-ice"></div>
-         <section class="container">
-             <div class="row">
-                 <div class="col valor">
-                     <span>R$ 2.345,99</span>
-                     <p>R$ 1.263,41 em 10x de R$ 132,99</p>
-                     <p><strong>R$ 1.263,41</strong><span>à vista</span><span>( 10% de desconto )</span></p>
-                 </div>
-             </div>
-         </section>
-         <div class="bg-ice"></div>
-         <section class="container">
-             <div class="row">
-                 <div class="col description">
-                     <h5>Detalhes do produto</h5>
-                     <p>Com o design moderno, essa cadeira é ideal pra quem se preocupa com estética sem abrir mão do conforto.</p>
-                 </div>
-             </div>
-         </section>
-         <div class="bg-ice"></div>
+        </section>
+        <div class="bg-ice"></div>
+        <section class="container">
+            <div class="row">
+                <div class="col title">
+                    <h2 class="d-flex justify-content-left">Cadeira Eames Estampada</h2>
+                </div>
+            </div>
+        </section>
+        <div class="bg-ice"></div>
+        <section class="container">
+            <div class="row">
+                <div class="col valor">
+                    <span>R$ 2.345,99</span>
+                    <p>R$ 1.263,41 em 10x de R$ 132,99</p>
+                    <p><strong>R$ 1.263,41</strong><span>à vista</span><span>( 10% de desconto )</span></p>
+                </div>
+            </div>
+        </section>
+        <div class="bg-ice"></div>
+        <section class="container">
+            <div class="row">
+                <div class="col description">
+                    <h5>Detalhes do produto</h5>
+                    <p>Com o design moderno, essa cadeira é ideal pra quem se preocupa com estética sem abrir mão do
+                        conforto.</p>
+                </div>
+            </div>
+        </section>
+        <div class="bg-ice"></div>
     </article>
-    <footer class="container fixed-bottom pt-2 pb-2 d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none">
-        <div class="row d-flex align-items-center">
-            <div class="col-6">
-                <span>R$ 1.263,41 à vista</span>
+
+    <!-- telas maiores de 768-->
+    <article class="d-none d-xs-none d-sm-none d-md-block d-lg-block d-xl-block">
+        <section class="container">
+            <div class="row">
+                <div id="Breadcrumb" class="col">
+                    <ul class="br-breadcrumb pt-3">
+                        <li class="home">
+                            <a href="#">
+                                <span class="sr-only">Página inicial</span>
+                                <i class="fas fa-home"></i>
+                            </a>
+                        </li>
+                        <li><a href="/#">Section</a></li>
+                        <li><a href="/#">Page</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-6 d-flex justify-content-end">
-                <button class="btn btn-primary">COMPRAR AGORA</button>
+        </section>
+        <section class="container pb-3">
+            <div class="row">
+                <div class="col-12 title">
+                    <h2 class="d-flex justify-content-left">Cadeira Eames Estampada</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div id="card">
+                        <!-- All you need to put beautiful, interactive 3D content on your site: -->
+                        <model-viewer
+                            src="https://cdn.glitch.com/d917115a-4d48-461c-af06-07b733f61f67%2Fcadeira.glb?v=1580759112494"
+                            ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
+                            alt="A 3D model of a chair" background-color="#eeF1FF" preload=""
+                            poster="https://cdn.glitch.com/d917115a-4d48-461c-af06-07b733f61f67%2FScreenshot%20from%202020-02-04%2011-05-00.png?v=1580825135220"
+                            shadow-intensity="1" shadow-softness="0" camera-controls="" interaction-prompt="auto"
+                            auto-rotate-delay="7000" ar="" data-js-focus-visible="">
+                            <div slot="ar-button" class="d-flex justify-content-center">
+                                <button class="btn btn-outline-primary mob d-flex align-items-center"><img src="./dist/imgs/cube.svg">EXPERIMENTE EM AR</button>
+                            </div>
+                        </model-viewer>
+                    </div>
+                    <span class="va d-flex justify-content-center align-items-center"><img src="./dist/imgs/cube.svg">Experiência em <strong> Realidade Aumentada </strong> - Acesse pelo seu Smartphone</span>
+                </div>
+                <div class="col-6 valor">
+                       <div class="col-12 pb-4">
+                        <span>R$ 2.345,99</span>
+                        <p><strong>R$ 1.263,41</strong><span>à vista</span><span class="d-flex">( 10% de desconto )</span></p>
+                        <p class="mb-0">ou R$ 1.263,41 em 10x de R$ 132,99</p>
+                        <a href="#" class="d-flex justify-content-start mt-0 mb-4">ver parcelas</a>
+                        <button class="d-flex justify-content-center btn btn-primary mt-3 mb-2 pay">COMPRAR AGORA</button>
+                       </div>
+                       <div class="col-xl-7 col-lg-9 col-md-12">
+                            <div class="input-group mb-3 mt-3">
+                                <label class="d-flex">Calcule o frete</label>
+                                <input type="search" class="d-block form-control"  placeholder="Digite seu cep" aria-label="Digite seu cep" aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                  <button class="btn btn-primary" type="button" id="button-addon2">ok</button>
+                                </div>
+                              </div>
+                       </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-3">
+                    <h2 class="title d-flex justify-content-left">Cadeira Eames Estampada</h2>
+                    <p>Inspirada no mobiliário do século XVI, a cadeira Carlota é destaque na decoração de cozinhas, salas de jantar, e inclusive, naquele cantinho favorito da casa. 
+                        Seu desenho se encaixa ao corpo e proporciona conforto e estabilidade ao sentar-se. Além disso, permite o empilhamento quando não está em uso. O tratamento contra raios UV a protege e garante a integridade da matéria-prima, evita o ressecamento e assegura a sua resistência estrutural, bem como a durabilidade da sua cor. Já a sua segurança e qualidade são validadas por laboratório creditado pelo INMETRO.</p>
+                </div>
+            </div>
+        </section>
+        <section class="container pre-footer pt-3 pb-3">
+            <div class="row">
+                <div class="col-4 d-flex flex-column justify-content-start align-self-center">
+                    <p>Fale Conosco</p>
+                    <h2 class="mb-0">(51) 3322-6828</h2>
+                </div>
+                <div class="col-4 d-flex justify-content-center align-self-center">
+                    <div>
+                        <p>DB Lab</p>
+                        <p class="mb-0">
+                            <span>Segunda a Sexta: 08h às 18h</span>
+                            <span class="d-flex">dblab@dbserver.com.br</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-self-center">
+                    <img src="./dist/imgs/logo-db-server.svg" alt="" title="">
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <footer class="mt-4">
+        <div class="container">
+            <!-- telas menores de 768-->
+            <div class="d-block d-xs-block d-sm-block d-md-none d-lg-none d-xl-none">
+            <div class="row">
+                <div class="d-flex align-items-center fixed-bottom pt-2 pb-2 footer">
+                    <div class="col-6">
+                        <span>R$ 1.263,41 à vista</span>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <button class="btn btn-primary">COMPRAR AGORA</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="d-none d-xs-none d-sm-none d-md-block d-lg-block d-xl-block">
+                <div class="d-flex justify-content-center align-self-center">
+                    <p>©2018 - DBServer - Todos os direitos reservados.</p>
+                </div>
             </div>
         </div>
-    </footer>    
-     <!-- 💁 Include both scripts below to support all browsers! -->
+    </footer>
+
+
+    <!-- 💁 Include both scripts below to support all browsers! -->
     <!-- Loads <model-viewer> for modern browsers: -->
     <script type="module" src="https://unpkg.com/@google/model-viewer@v0.8.0/dist/model-viewer.js"></script>
-          
+
     <!-- Loads <model-viewer> for old browsers like IE11: -->
     <script nomodule="" src="https://unpkg.com/@google/model-viewer@v0.8.0/dist/model-viewer-legacy.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-     
-</body>
-</html>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
+</body>
+
+</html>
